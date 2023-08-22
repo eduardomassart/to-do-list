@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+:root {
+    --color-pink: #D51E5E;
+    --color-purple: #8E38FD;
+    --color-darkgrey: #111828;
+    --color-mediumgrey: #202938;
+    --color-lightgrey: #384152;
+    --color-white: #D1E5ED;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(140deg, var(--color-pink), var(--color-purple));
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    height: 100vh;
+}
