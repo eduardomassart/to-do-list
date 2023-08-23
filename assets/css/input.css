@@ -1,0 +1,39 @@
+.input {
+    grid-area: input;
+    display: flex;
+    gap: 1.5%;
+}
+
+.input__box {
+    width: 85%;
+    border: none;
+    border-radius: 15px;
+    background-color: var(--color-mediumgrey);
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    color: var(--color-white);
+}
+
+.input__button {
+    width: 15%;
+    padding: 0;
+    border: none;
+    border-radius: 15px;
+    background-color: transparent;
+    font-size: 1.2rem;
+    font-weight: 800;
+    background: -webkit-linear-gradient(45deg, var(--color-pink), var(--color-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.5s;
+}
+
+.input__button:hover {
+    transform: scale(1.1);
+}
+
+.input__box::placeholder{
+    font-family: 'Roboto', sans-serif;
+    color: var(--color-font);
+    font-size: 1.2rem;
+}

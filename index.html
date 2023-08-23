@@ -6,19 +6,39 @@
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/container.css">
+    <link rel="stylesheet" href="./assets/css/input.css">
+    <link rel="stylesheet" href="./assets/css/list.css">
     <title>To do list</title>
 </head>
     <body>
         <section class="container">
-            <h1 class="container__title">Lista de Tarefas</h1>
+            <h1 class="container__title">Task List</h1>
             <div class="input">
-                <input type="text" class="input__box" id="input__box" placeholder="Digite suas tarefas aqui">
-                <button class="input__button">add</button>
+                <input type="text" class="input__box" id="input__box" placeholder="What do you have planned?">
+                <button class="input__button">Add task</button>
             </div>
             <div class="list">
-                <h2 class="list__title">Tarefas</h2>
+                <h2 class="list__title">Tasks</h2>
                 <div class="list__item">
-                    <input type="text" class="item__input" id="item__input" value="Comprar passagem aérea">
+                    <input type="text" class="item__input" id="item__input" value="Comprar passagem aérea" disabled>
+                    <button class="item__button-edit">edit</button>
+                    <button class="item__button-save">save</button>
+                    <button class="item__button-delete">delete</button>
+                </div>
+                <div class="list__item">
+                    <input type="text" class="item__input" id="item__input" value="Comprar passagem aérea" disabled>
+                    <button class="item__button-edit">edit</button>
+                    <button class="item__button-save">save</button>
+                    <button class="item__button-delete">delete</button>
+                </div>
+                <div class="list__item">
+                    <input type="text" class="item__input" id="item__input" value="Comprar passagem aérea" disabled>
+                    <button class="item__button-edit">edit</button>
+                    <button class="item__button-save">save</button>
+                    <button class="item__button-delete">delete</button>
+                </div>
+                <div class="list__item">
+                    <input type="text" class="item__input" id="item__input" value="Comprar passagem aérea" disabled>
                     <button class="item__button-edit">edit</button>
                     <button class="item__button-save">save</button>
                     <button class="item__button-delete">delete</button>
@@ -26,4 +46,5 @@
             </div>
         </section>
     </body>
+    <script src="./assets/js/cria-tasks.js"></script>
 </html>

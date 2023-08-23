@@ -4,4 +4,20 @@
     height: 80%;
     padding: 1rem;
     width: 70%;
+    display: grid;
+    grid-template-rows: 1rem repeat(2, 1fr) 1rem 5fr;
+    grid-template-areas: 
+        "."
+        "container__title"
+        "input"
+        "."
+        "list"
+    ;
+    row-gap: 1rem;
+}
+
+.container__title {
+    grid-area: container__title;
+    font-size: 3rem;
+    font-weight: 400;
 }
