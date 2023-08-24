@@ -1,7 +1,7 @@
 .list {
     grid-area: list;
     display: grid;
-    grid-template-rows: 2rem repeat(4, 1fr);
+    grid-template-rows: 2rem auto;
     gap: 0.5rem;
 }
 
@@ -10,48 +10,27 @@
     font-weight: 200;
 }
 
-.list__item {
-    display: flex;
-    background-color: var(--color-darkgrey);
-    border-radius: 15px;
+.list__items {
+    height: 238px;
+    overflow-y: auto;
 }
 
-.item__button-save {
-    display: none;
+::-webkit-scrollbar {
+    display: absolute;
+    width: 0.75rem;
 }
 
-.item__input {
-    width: 80%;
-    background-color: transparent;
-    border: none;
-    border-radius: 15px;
-    padding: 0.5rem 1rem;
-    font-size: 1.2rem;
-    color: var(--color-white);
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(var(--color-pink), var(--color-purple));
+    border: solid 5px var(--color-mediumgrey);
+    border-radius: 10px;
 }
 
-.item__button-edit, .item__button-save {
-    padding: 0;
-    width: 10%;
-    border: none;
-    border-radius: 15px;
-    background-color: transparent;
-    font-size: 1rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    background: -webkit-linear-gradient(45deg, var(--color-pink), var(--color-purple));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+::-webkit-scrollbar-thumb:hover {
+    border: solid 2px var(--color-mediumgrey);
 }
 
-.item__button-delete {
-    border: none;
-    border-radius: 15px;
-    background-color: transparent;
-    color: var(--color-red);
-    padding: 0;
-    width: 10%;
-    text-transform: uppercase;
-    font-size: 1rem;
-    font-weight: 700;
+::-webkit-scrollbar-track {
+    background: var(--color-font);
+    border-radius: 10px;
 }
