@@ -1,0 +1,11 @@
+.list__empty {
+    position: absolute;
+    top: 35%;
+    left: 40%;
+    text-align: center;
+    user-select: none;
+}
+
+.list__empty-text {
+    font-weight: 500;
+}

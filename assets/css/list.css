@@ -13,6 +13,7 @@
 .list__items {
     height: 238px;
     overflow-y: auto;
+    position: relative;
 }
 
 ::-webkit-scrollbar {
