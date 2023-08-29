@@ -12,9 +12,6 @@ function criaTask(task) {
   //desabilita input do item.
   inputItem.disabled = true;
 
-  //busca pai dos elementos
-  var listOfItems = document.querySelector(".list__items");
-
   //adiciona classe aos elementos
   itemList.classList.add("list__item");
   inputItem.classList.add("item__input");
@@ -27,6 +24,9 @@ function criaTask(task) {
   buttonSave.textContent = "save";
   buttonDel.textContent = "delete";
 
+  //busca pai dos elementos
+  var listOfItems = document.querySelector(".list__items");
+
   listOfItems.appendChild(itemList);
   itemList.appendChild(inputItem);
   itemList.appendChild(buttonEdit);
@@ -38,31 +38,6 @@ function criaTask(task) {
   editaTask();
 }
 
-function editaTask() {
-  var buttonsEdit = document.querySelectorAll(".item__button-edit");
-  var buttonsSave = document.querySelectorAll(".item__button-save");
-  var inputsItem = document.querySelectorAll(".item__input");
-
-  for (let i = 0; i < buttonsEdit.length; i++) {
-    const edit = buttonsEdit[i];
-    const save = buttonsSave[i];
-    const input = inputsItem[i];
-
-    edit.addEventListener("click", function () {
-      input.disabled = false;
-      input.focus();
-      edit.style.display = "none";
-      save.style.display = "inline-block";
-    })
-
-    save.addEventListener("click", function (){
-      input.disabled = true;
-      edit.style.display = "inline-block";
-      save.style.display = "none";
-    })
-  }
-}
-
 function ocultaEmptyList () {
   var emptyList = document.querySelector(".list__empty");
   emptyList.style.display = "none";
@@ -70,8 +45,13 @@ function ocultaEmptyList () {
 
 buttonInputTask.addEventListener("click", function(){
   var task = inputTask.value;
-  criaTask(task);
-  inputTask.value = "";
-  inputTask.focus();  
-  ocultaEmptyList();
+
+  if (!task.length == 0) {
+    criaTask(task);
+    inputTask.value = "";
+    inputTask.focus();  
+    ocultaEmptyList();
+  } else {
+    alert("Por favor, insira um texto no campo para criar sua Task!")
+  }
 })
