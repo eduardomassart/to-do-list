@@ -3,7 +3,7 @@ var buttonInputTask = document.querySelector(".input__button");
 
 function criaTask(task) {
   // cria elementos HTML
-  var itemList = document.createElement('div');
+  var itemList = document.createElement('li');
   var inputItem = document.createElement('input');
   var buttonEdit = document.createElement("button");
   var buttonSave = document.createElement("button");
@@ -34,8 +34,6 @@ function criaTask(task) {
   itemList.appendChild(buttonDel);
 
   inputItem.value = task;
-
-  editaTask();
 }
 
 function ocultaEmptyList () {
@@ -51,6 +49,7 @@ buttonInputTask.addEventListener("click", function(){
     inputTask.value = "";
     inputTask.focus();  
     ocultaEmptyList();
+    editaTask();
   } else {
     alert("Por favor, insira um texto no campo para criar sua Task!")
   }
