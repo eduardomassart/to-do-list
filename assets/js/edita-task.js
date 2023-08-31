@@ -1,9 +1,11 @@
+
+
 function editaTask() {
-    var buttonsEdit = document.querySelectorAll(".item__button-edit");
-    var buttonsSave = document.querySelectorAll(".item__button-save");
-    var inputsItem = document.querySelectorAll(".item__input");
-    var buttonsDelete = document.querySelectorAll(".item__button-delete");
-    var itemsList = document.querySelectorAll(".list__item");
+  var buttonsEdit = document.querySelectorAll(".item__button-edit");
+  var buttonsSave = document.querySelectorAll(".item__button-save");
+  var inputsItem = document.querySelectorAll(".item__input");
+  var buttonsDelete = document.querySelectorAll(".item__button-delete");
+  var itemsList = document.querySelectorAll(".list__item");
 
     for (let i = 0; i < buttonsEdit.length; i++) {
       const edit = buttonsEdit[i];
@@ -15,18 +17,31 @@ function editaTask() {
       edit.addEventListener("click", function () {
         input.disabled = false;
         input.focus();
-        edit.style.display = "none";
-        save.style.display = "inline-block";
+        edit.classList.remove("active");
+        save.classList.add("active");
       })
   
       save.addEventListener("click", function (){
         if (!input.value == 0) {
-            input.disabled = true;
-            edit.style.display = "inline-block";
-            save.style.display = "none";
+          input.disabled = true;
+          save.classList.remove("active");
+          edit.classList.add("active");
         } else {
+          itemList.remove();
+          reexibeEmpty();
+        }
+      })
+
+      input.addEventListener("keydown", function (event) {
+        if (event.key === "Enter") {
+          if (!input.value == 0) {
+            input.disabled = true;
+            save.classList.remove("active");
+            edit.classList.add("active");
+          } else {
             itemList.remove();
             reexibeEmpty();
+          }
         }
       })
 

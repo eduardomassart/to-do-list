@@ -1,5 +1,6 @@
 var inputTask = document.querySelector("#input__box");
 var buttonInputTask = document.querySelector(".input__button");
+var task;
 
 function criaTask(task) {
   // cria elementos HTML
@@ -16,6 +17,7 @@ function criaTask(task) {
   itemList.classList.add("list__item");
   inputItem.classList.add("item__input");
   buttonEdit.classList.add("item__button-edit");
+  buttonEdit.classList.add("active");
   buttonSave.classList.add("item__button-save");
   buttonDel.classList.add("item__button-delete");
 
@@ -41,9 +43,8 @@ function ocultaEmptyList () {
   emptyList.style.display = "none";
 }
 
-buttonInputTask.addEventListener("click", function(){
-  var task = inputTask.value;
-
+function executaTask () {
+  task = inputTask.value;
   if (!task.length == 0) {
     criaTask(task);
     inputTask.value = "";
@@ -53,4 +54,16 @@ buttonInputTask.addEventListener("click", function(){
   } else {
     alert("Por favor, insira um texto no campo para criar sua Task!")
   }
+}
+
+//eventos de criação das tasks.
+buttonInputTask.addEventListener("click", function(){
+  executaTask();
 })
+
+inputTask.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    executaTask();
+  }
+})
+

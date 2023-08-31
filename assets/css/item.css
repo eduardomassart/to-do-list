@@ -6,10 +6,6 @@
     height: 3.2rem;
 }
 
-.item__button-save {
-    display: none;
-}
-
 .item__input {
     width: 75%;
     background-color: transparent;
@@ -22,6 +18,7 @@
 }
 
 .item__button-edit, .item__button-save {
+    display: none;
     padding: 0;
     width: 10%;
     border: none;
@@ -35,6 +32,10 @@
     -webkit-text-fill-color: transparent;
 }
 
+.active {
+    display: block;
+}
+
 .item__button-delete {
     border: none;
     border-radius: 15px;
@@ -45,4 +46,10 @@
     text-transform: uppercase;
     font-size: 1rem;
     font-weight: 800;
+}
+
+.item__button-edit:hover, .item__button-save:hover, .item__button-delete:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.5s;
 }
