@@ -32,6 +32,26 @@
     -webkit-text-fill-color: transparent;
 }
 
+/* ***** Opção com Imagens .svg ****
+
+.item__button-edit {
+    background-image: url(../img/edit.svg);
+}
+
+.item__button-save {
+    background-image: url(../img/save.svg);
+}
+.item__button-edit, .item__button-save {
+    width: 3.2rem;
+    border: none;
+    border-radius: 15px;
+    background-color: transparent;
+    display: none;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+} */
+
 .active {
     display: block;
 }
