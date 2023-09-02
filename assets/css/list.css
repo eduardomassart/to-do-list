@@ -37,3 +37,9 @@
     background: var(--color-font);
     border-radius: 10px;
 }
+
+@media screen and (max-width: 800px) {
+    .list__title {
+        font-size: 1.6rem;
+    }
+}

@@ -1,5 +1,6 @@
 .list__item {
     display: flex;
+    justify-content: space-evenly;
     background-color: var(--color-darkgrey);
     border-radius: 15px;
     margin: 0 0.3rem 0.5rem 0;
@@ -7,14 +8,13 @@
 }
 
 .item__input {
-    width: 75%;
+    width: 70%;
     background-color: transparent;
     border: none;
     border-radius: 15px;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem;
     font-size: 1.2rem;
     color: var(--color-white);
-    margin-right: 1rem;
 }
 
 .item__button-edit, .item__button-save {
@@ -62,7 +62,7 @@
     background-color: transparent;
     color: var(--color-red);
     padding: 0;
-    width: 10%;
+    width: 12%;
     text-transform: uppercase;
     font-size: 1rem;
     font-weight: 800;
@@ -72,4 +72,21 @@
     cursor: pointer;
     transform: scale(1.1);
     transition: 0.5s;
+}
+
+@media screen and (max-width: 930px) {
+    .item__button-delete {
+        width: 14%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .item__input {
+        font-size: 1.0rem;
+        width: 65%;
+    }
+
+    .item__button-delete, .item__button-edit, .item__button-save {
+        font-size: 0.8rem;
+    }
 }

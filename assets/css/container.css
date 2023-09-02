@@ -20,3 +20,9 @@
     font-size: 3rem;
     font-weight: 400;
 }
+
+@media screen and (max-width: 800px) {
+    .container__title {
+        font-size: 2.5rem;
+    }
+}
