@@ -52,8 +52,32 @@
     background-position: center;
 } */
 
+.imgEdit, .imgSave, .imgDel {
+    display: none;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.imgEdit {
+    background-image: url(../img/edit.svg);
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.imgSave {
+    background-image: url(../img/save.svg);
+    width: 1rem;
+    height: 1rem;
+}
+
+.imgDel {
+    background-image: url(../img/delete.svg);
+    width: 1.4rem;
+    height: 1.4rem;
+}
+
 .active {
-    display: block;
+    display: inline-block;
 }
 
 .item__button-delete {
@@ -74,13 +98,18 @@
     transition: 0.5s;
 }
 
-@media screen and (max-width: 930px) {
-    .item__button-delete {
-        width: 14%;
+@media screen and (max-width: 800px) {
+    .item__input {
+        font-size: 1.0rem;
+        width: 65%;
+    }
+
+    .item__button-delete, .item__button-edit, .item__button-save {
+        font-size: 0.8rem;
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
     .item__input {
         font-size: 1.0rem;
         width: 65%;

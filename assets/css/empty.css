@@ -1,7 +1,5 @@
 .list__empty {
-    position: absolute;
-    top: 35%;
-    left: 40%;
+    margin: 10% auto 0 auto;
     text-align: center;
     user-select: none;
 }

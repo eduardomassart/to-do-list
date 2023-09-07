@@ -3,6 +3,7 @@ var buttonInputTask = document.querySelector(".input__button");
 var listOfItems = document.querySelector(".list__items");
 var emptyList = document.querySelector(".list__empty");
 var task;
+var redimensionou;
 
 function criaTask() {
   // cria elementos HTML
@@ -23,10 +24,10 @@ function criaTask() {
   buttonSave.classList.add("item__button-save");
   buttonDel.classList.add("item__button-delete");
 
-  //Insere textContent dos botões criados.
-  buttonEdit.textContent = "edit";
-  buttonSave.textContent = "save";
-  buttonDel.textContent = "delete";
+    //Insere textContent dos botões criados.
+    buttonEdit.textContent = "edit";
+    buttonSave.textContent = "save";
+    buttonDel.textContent = "delete";
 
   //aloca elementos em sua tag pai.
   listOfItems.appendChild(itemList);
@@ -59,11 +60,12 @@ function executaTask() {
 //eventos de criação das tasks.
 buttonInputTask.addEventListener("click", function(){
   executaTask();
+  handleResize();
 })
 
 inputTask.addEventListener("keydown", function (event){
   if (event.key === "Enter") {
     executaTask();
+    handleResize();
   }
 })
-
