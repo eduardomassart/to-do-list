@@ -3,7 +3,7 @@
     display: grid;
     grid-template-rows: 2rem auto;
     gap: 0.5rem;
-    height: 255px;
+    height: 100%;
 }
 
 .list__title {
